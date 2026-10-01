@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vidyarthi Course",
+  "type": "object",
+  "required": ["id", "title", "provider", "providerUrl", "category", "level", "language", "price", "mode", "certificate", "noCodingNeeded", "aiForNonTech", "lastVerified", "status", "sourceType"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "title_i18n": {
+      "type": "object",
+      "properties": { "en": {"type":"string"}, "hi": {"type":"string"}, "bn": {"type":"string"} },
+      "additionalProperties": false
+    },
+    "description": { "type": "string" },
+    "description_i18n": {
+      "type": "object",
+      "properties": { "en": {"type":"string"}, "hi": {"type":"string"}, "bn": {"type":"string"} },
+      "additionalProperties": false
+    },
+    "provider": { "type": "string" },
+    "providerUrl": { "type": "string" },
+    "affiliateUrl": { "type": "string" },
+    "category": { "type": "string" },
+    "level": { "enum": ["Beginner", "Intermediate", "Advanced"] },
+    "language": { "type": "array", "items": { "type": "string" } },
+    "duration": { "type": ["string", "null"] },
+    "durationHours": { "type": ["number", "null"] },
+    "mode": { "enum": ["self-paced", "live", "hybrid"] },
+    "price": { "type": "number", "minimum": 0 },
+    "priceLabel": { "type": "string" },
+    "certificate": { "type": "boolean" },
+    "noCodingNeeded": { "type": "boolean" },
+    "aiForNonTech": { "type": "boolean" },
+    "careerOutcome": { "type": "string" },
+    "lastVerified": { "type": "string", "format": "date" },
+    "status": { "enum": ["draft", "published", "closed"] },
+    "sourceType": { "enum": ["public_provider", "provider_submitted", "affiliate", "vidyarthi_original", "sample"] }
+  },
+  "additionalProperties": true
+}
