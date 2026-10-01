@@ -1,0 +1,16 @@
+{
+  "version": "V6",
+  "sample_courses": true,
+  "pricing": false,
+  "partner_claims": false,
+  "free_classroom_ad_slots": true,
+  "rights_fields": [
+    "owned",
+    "public_domain",
+    "cc_license",
+    "embed_authorized",
+    "partner_licensed",
+    "affiliate",
+    "external_link"
+  ]
+}
